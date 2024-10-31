@@ -8,14 +8,14 @@ def get_long_description():
 
 
 setup(
-    name="RouterOS-api",
+    name="RouterOS-api-fork",
     version='0.18.2.dev0',
     description='Python API to RouterBoard devices produced by MikroTik.',
     long_description=get_long_description(),
     long_description_content_type='text/markdown',
-    author='Social WiFi',
-    author_email='it@socialwifi.com',
-    url='https://github.com/socialwifi/RouterOS-api',
+    author='Pavel Korchagin',
+    author_email='xoste49@gmail.com',
+    url='https://github.com/xoste49/RouterOS-api-fork',
     packages=find_packages(),
     test_suite="tests",
     license="MIT",
@@ -30,5 +30,6 @@ setup(
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
     ],
 )
