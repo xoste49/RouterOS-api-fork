@@ -1,6 +1,6 @@
 [project]
 name = "routeros-api-fork"
-version = "0.18.2.dev1"
+version = "0.18.2.dev2"
 description = "Python API to RouterBoard devices produced by MikroTik."
 readme = "README.md"
 keywords = ["RouterOS", "MikroTik", "API"]
@@ -18,3 +18,8 @@ Homepage = "https://github.com/xoste49/RouterOS-api-fork"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "tox>=4.23.2",
+]
