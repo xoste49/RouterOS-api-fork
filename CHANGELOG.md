@@ -1,10 +1,13 @@
 Changelog for RouterOS-api
 ==========================
 
-## 0.18.2 (unreleased)
+## 0.19.0 (unreleased)
 ----------------------
 
-- Add support for new Python version 3.13
+- Add support for new Python version 3.13.
+- Migration on uv.
+- Added push to pypi.org from GitHub Actions.
+- Fix Unicode Decode Error (UTF-8).
 
 
 ## 0.18.1 (2024-05-28)
