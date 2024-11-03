@@ -7,8 +7,8 @@ try:
 except ImportError:
     import mock
 
-from routeros_api import api_socket
-from routeros_api import exceptions
+from routeros_api_fork import api_socket
+from routeros_api_fork import exceptions
 
 
 class TestSocketWrapper(TestCase):

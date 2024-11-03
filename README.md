@@ -1,14 +1,6 @@
 # RouterOS-api
 
-[![Build Status](https://travis-ci.org/socialwifi/RouterOS-api.svg?branch=master)](https://travis-ci.org/socialwifi/RouterOS-api)
-[![Latest Version](https://img.shields.io/pypi/v/RouterOS-api.svg)](https://pypi.python.org/pypi/RouterOS-api/)
-[![Supported Python versions](https://img.shields.io/pypi/pyversions/RouterOS-api.svg)](https://pypi.python.org/pypi/RouterOS-api/)
-[![Wheel Status](https://img.shields.io/pypi/wheel/RouterOS-api.svg)](https://pypi.python.org/pypi/RouterOS-api/)
-[![License](https://img.shields.io/pypi/l/RouterOS-api.svg)](https://github.com/socialwifi/RouterOS-api/blob/master/LICENSE)
-
 Python API to RouterBoard devices produced by [MikroTik](https://mikrotik.com/) written by [Social WiFi](https://socialwifi.com).
-
-[![Social WiFi logo](https://static.socialwifi.com/cloud/1/images/logo.svg)](https://socialwifi.com)
 
 ## Usage
 
@@ -17,16 +9,16 @@ Python API to RouterBoard devices produced by [MikroTik](https://mikrotik.com/) 
 ```python
 #!/usr/bin/python
 
-import routeros_api
+import routeros_api_fork
 
-connection = routeros_api.RouterOsApiPool('IP', username='admin', password='')
+connection = routeros_api_fork.RouterOsApiPool('IP', username='admin', password='')
 api = connection.get_api()
 ```
 
 #### Connect Options
 
 ```python
-routeros_api.RouterOsApiPool(
+routeros_api_fork.RouterOsApiPool(
     host,
     username='admin',
     password='',
@@ -58,7 +50,7 @@ Optional Parameters:
 If we want to use SSL, we can simply specify `use_ssl` as `True`:
 
 ```python
-connection = routeros_api.RouterOsApiPool('<IP>', username='admin', password='', use_ssl=True)
+connection = routeros_api_fork.RouterOsApiPool('<IP>', username='admin', password='', use_ssl=True)
 ```
 
 This will automatically verify SSL certificate and hostname. 
@@ -69,7 +61,7 @@ The most flexible way to modify SSL parameters is to provide an SSL Context obje
 e.g. if using a self-signed certificate, you can (but probably shouldn't) use:
 
 ```python
-connection = routeros_api.RouterOsApiPool(
+connection = routeros_api_fork.RouterOsApiPool(
     '<IP>',
     username='admin',
     password='',
@@ -87,7 +79,7 @@ For security we only attempt the plaintext login if requested using the `plainte
 It is highly recommended only to use this option with SSL enabled.
 
 ```python
-routeros_api.RouterOsApiPool(host, username='admin', password='', plaintext_login=True)
+routeros_api_fork.RouterOsApiPool(host, username='admin', password='', plaintext_login=True)
 ```
 
 ### Execute Commands
@@ -188,7 +180,7 @@ The example script only prints "hello". Here's a simplifed example of how to run
 '/put "hello"'
 >>> async_response = api.get_binary_resource('/').call('system/script/run', {"number": '0'.encode('utf-8')})
 >>> async_response.__dict__
-{'command': <routeros_api.sentence.CommandSentence object at 0x73a0f2b3eba0>, 'done_message': {'ret': b'hello'}, 'done': True, 'error': None}
+{'command': <routeros_api_fork.sentence.CommandSentence object at 0x73a0f2b3eba0>, 'done_message': {'ret': b'hello'}, 'done': True, 'error': None}
 >>> async_response.done_message['ret']
 b'hello'
 ```

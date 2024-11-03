@@ -1,8 +1,8 @@
 import unittest
 
-from routeros_api import api
-from routeros_api import api_communicator
-from routeros_api import base_api
+from routeros_api_fork import api
+from routeros_api_fork import api_communicator
+from routeros_api_fork import base_api
 
 try:
     from unittest import mock

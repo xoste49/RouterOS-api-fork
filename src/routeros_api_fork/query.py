@@ -1,4 +1,4 @@
-from routeros_api import utils
+from routeros_api_fork import utils
 
 
 class BasicQuery(object):

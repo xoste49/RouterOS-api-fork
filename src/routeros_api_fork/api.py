@@ -1,13 +1,13 @@
 import binascii
 import hashlib
 
-from routeros_api import api_communicator
-from routeros_api import api_socket
-from routeros_api import api_structure
-from routeros_api import base_api
-from routeros_api import communication_exception_parsers
-from routeros_api import exceptions
-from routeros_api import resource
+from routeros_api_fork import api_communicator
+from routeros_api_fork import api_socket
+from routeros_api_fork import api_structure
+from routeros_api_fork import base_api
+from routeros_api_fork import communication_exception_parsers
+from routeros_api_fork import exceptions
+from routeros_api_fork import resource
 
 
 def connect(host, username='admin', password='', port=None, plaintext_login=False, use_ssl=False, ssl_verify=True,

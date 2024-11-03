@@ -1,8 +1,8 @@
-from routeros_api.api_communicator import async_decorator
-from routeros_api.api_communicator import base
-from routeros_api.api_communicator import encoding_decorator
-from routeros_api.api_communicator import exception_decorator
-from routeros_api.api_communicator import key_cleaner_decorator
+from routeros_api_fork.api_communicator import async_decorator
+from routeros_api_fork.api_communicator import base
+from routeros_api_fork.api_communicator import encoding_decorator
+from routeros_api_fork.api_communicator import exception_decorator
+from routeros_api_fork.api_communicator import key_cleaner_decorator
 
 
 class ApiCommunicator(encoding_decorator.EncodingApiCommunicator):

@@ -1,7 +1,7 @@
 import re
 
-from routeros_api import exceptions
-from routeros_api import query
+from routeros_api_fork import exceptions
+from routeros_api_fork import query
 
 response_re = re.compile(rb'^!(re|trap|fatal|done)$')
 attribute_re = re.compile(rb'^=([^=]+)=(.*)$', re.DOTALL)

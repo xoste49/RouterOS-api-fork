@@ -4,7 +4,7 @@ Changelog for RouterOS-api
 ## 0.18.2 (unreleased)
 ----------------------
 
-- Nothing changed yet.
+- Add support for new Python version 3.13
 
 
 ## 0.18.1 (2024-05-28)
