@@ -5,9 +5,9 @@ except ImportError:
 
 import unittest
 
-from routeros_api import api_structure as structure
-from routeros_api import resource
-from routeros_api.api_communicator import base
+from routeros_api_fork import api_structure as structure
+from routeros_api_fork import resource
+from routeros_api_fork.api_communicator import base
 
 BYTES_STRUCTURE = {'bytes': structure.BytesField()}
 BOOLEAN_STRUCTURE = {'boolean': structure.BooleanField()}

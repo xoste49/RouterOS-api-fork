@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from routeros_api import exceptions
+from routeros_api_fork import exceptions
 
 try:
     from unittest import mock
@@ -13,7 +13,7 @@ except ImportError:
     import io
     BytesIO = io.BytesIO
 
-from routeros_api import base_api
+from routeros_api_fork import base_api
 
 
 class TestEncodeLength(TestCase):
