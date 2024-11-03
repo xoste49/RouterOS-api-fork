@@ -1,7 +1,7 @@
 import socket
 import ssl
 
-from routeros_api import exceptions
+from routeros_api_fork import exceptions
 
 try:
     import errno

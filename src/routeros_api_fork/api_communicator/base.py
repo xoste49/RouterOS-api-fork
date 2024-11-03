@@ -1,6 +1,6 @@
-from routeros_api import exceptions
-from routeros_api import query
-from routeros_api import sentence
+from routeros_api_fork import exceptions
+from routeros_api_fork import query
+from routeros_api_fork import sentence
 
 
 class ApiCommunicatorBase(object):

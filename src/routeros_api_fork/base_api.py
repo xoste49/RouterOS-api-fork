@@ -1,6 +1,6 @@
 import socket
 
-from routeros_api import exceptions
+from routeros_api_fork import exceptions
 
 LENGTH_MATRIX = [
     (0x80, 0x0),
