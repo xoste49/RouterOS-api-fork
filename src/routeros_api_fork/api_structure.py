@@ -4,6 +4,8 @@ import datetime
 import ipaddress
 import re
 
+import chardet
+
 
 class Field(object):
     __metaclass__ = abc.ABCMeta
@@ -28,7 +30,16 @@ class StringField(Field):
         return string.encode()
 
     def get_python_value(self, bytes):
-        return bytes.decode()
+        # Detect the character encoding using chardet
+        encoding_info = chardet.detect(bytes)
+        encoding = encoding_info['encoding']
+
+        # Decode the byte data using the detected encoding
+        try:
+            return bytes.decode(encoding)
+        except (UnicodeDecodeError, TypeError):
+            # If decoding fails, use a replacement mechanism to prevent crashes
+            return bytes.decode(encoding, errors='replace')
 
 
 class BytesField(Field):

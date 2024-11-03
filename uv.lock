@@ -88,8 +88,11 @@ wheels = [
 
 [[package]]
 name = "routeros-api-fork"
-version = "0.18.2.dev2"
+version = "0.19.0"
 source = { editable = "." }
+dependencies = [
+    { name = "chardet" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -97,6 +100,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "chardet", specifier = ">=5.2.0" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "tox", specifier = ">=4.23.2" }]
